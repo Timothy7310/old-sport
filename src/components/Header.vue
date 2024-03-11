@@ -2,35 +2,19 @@
   <header class="header">
     <div class="container">
       <div class="header__wrap">
-        <img
-          :src="angelsLeft"
-          alt="Cute Angels"
-          data-aos="fade-right"
-          data-aos-delay="300"
-          data-aos-easing="ease-in-out"
-          data-aos-duration="1000"
-          class="header__img aos-init aos-animate"
-        />
+        <img :src="angelsLeft" alt="Cute Angels" class="header__img" />
         <div class="header__text">
           <h1 class="header__title">Old Sport</h1>
           <span class="header__subtitle">Speakeasy Bar</span>
         </div>
-        <img
-          :src="angelsRight"
-          alt="Cute Angels"
-          data-aos="fade-left"
-          data-aos-delay="300"
-          data-aos-easing="ease-in-out"
-          data-aos-duration="1000"
-          class="header__img aos-init aos-animate"
-        />
+        <img :src="angelsRight" alt="Cute Angels" class="header__img" />
       </div>
     </div>
   </header>
 </template>
 <script lang="ts" setup>
-import angelsLeft from "../assets/header/angels-left.png";
-import angelsRight from "../assets/header/angels-right.png";
+import angelsLeft from "@/assets/header/angels-left.png";
+import angelsRight from "@/assets/header/angels-right.png";
 </script>
 <style>
 .header {
@@ -50,19 +34,17 @@ import angelsRight from "../assets/header/angels-right.png";
   align-items: center;
 }
 .header__title {
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 155px;
   line-height: 220px;
-  color: #f04902;
+  color: var(--warning-color);
   margin: 0;
 }
 .header__subtitle {
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 44px;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 

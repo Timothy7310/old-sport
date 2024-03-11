@@ -1,19 +1,62 @@
+:root {
+  --white-color: #ffffff;
+  --main-bg: #1b191a;
+  --accent-color: #ab8c6d;
+  --warning-color: #f04902;
+  --border-color: #826d3d;
+}
+
+@font-face {
+  font-family: "Herr Von Muellerhoff";
+  src: url("@/fonts/Herr-Von-Muellerhoff-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+
+@font-face {
+  font-family: "Sawarabi Mincho";
+  src: url("@/fonts/Sawarabi-Mincho.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-030A;
+}
+
+@font-face {
+  font-family: "Limelight";
+  src: url("@/fonts/Limelight-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+
 body {
   margin: 0;
   font-family: "Sawarabi Mincho", sans-serif;
-  background-color: #1b191a;
-  color: #fff;
+  background-color: var(--main-bg);
+  color: var(--white-color);
 }
 
 * {
   box-sizing: border-box;
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 h1 {
   font-family: "Herr Von Muellerhoff", cursive;
 }
 
-h2 {
+h2,
+h3 {
   font-family: "Limelight", cursive;
 }
 

@@ -5,21 +5,23 @@
         Cocktails <br class="day-menu__title--br" />
         of day
       </h2>
-      <Cocktail
-        v-for="cocktail in cocktailFiltred"
-        :image="cocktail.image"
-        :name="cocktail.name"
-        :is-wide-name="cocktail.isWideName"
-        :is-cocktail-of-day="cocktail.isCocktailOfDay"
-        :ingredients="cocktail.ingredients"
-      />
+      <div class="list">
+        <Cocktail
+          v-for="cocktail in cocktailFiltred"
+          :image="cocktail.image"
+          :name="cocktail.name"
+          :is-wide-name="cocktail.isWideName"
+          :is-cocktail-of-day="cocktail.isCocktailOfDay"
+          :ingredients="cocktail.ingredients"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { cocktails } from "../data/cocktails";
-import Cocktail from "./Cocktail.vue";
+import { cocktails } from "@/data/cocktails";
+import Cocktail from "@/components/Cocktail.vue";
 
 const cocktailFiltred = cocktails.filter((x) => x.isCocktailOfDay);
 </script>
@@ -27,10 +29,12 @@ const cocktailFiltred = cocktails.filter((x) => x.isCocktailOfDay);
 <style>
 .day-menu {
   padding: 20px;
-  border: 20px solid #826d3d;
+  border: 20px solid var(--border-color);
   border-image-source: url("@/assets/day-menu/day-pattern.jpg");
   border-image-slice: 20 22;
   border-image-repeat: round;
+  display: grid;
+  gap: 20px;
 }
 .day-menu__title {
   font-size: 68px;
@@ -40,7 +44,6 @@ const cocktailFiltred = cocktails.filter((x) => x.isCocktailOfDay);
   margin: 0px;
   background-clip: text;
   color: transparent;
-  margin-bottom: 20px;
 }
 .day-menu__title--br {
   display: none;

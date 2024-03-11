@@ -8,7 +8,7 @@
           alt=""
           class="cocktail__recipe-img"
         />
-        <h2 class="cocktail__recipe-title">{{ props.name }}</h2>
+        <h3 class="cocktail__recipe-title">{{ props.name }}</h3>
       </div>
       <ul class="cocktail__ingredients">
         <li
@@ -25,9 +25,9 @@
 
 <script lang="ts" setup>
 import { defineProps } from "vue";
-import type { Cocktail } from "../types/index.types";
-import nameIcon from "../assets/icons/name.svg";
-import nameIconWide from "../assets/icons/name-wide.svg";
+import type { Cocktail } from "@/types/index.types";
+import nameIcon from "@/assets/icons/name.svg";
+import nameIconWide from "@/assets/icons/name-wide.svg";
 
 const props = defineProps<Cocktail>();
 </script>
@@ -36,7 +36,7 @@ const props = defineProps<Cocktail>();
 .cocktail {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
+  gap: 10px;
 }
 
 .cocktail:nth-last-child(1) {
@@ -51,14 +51,12 @@ const props = defineProps<Cocktail>();
 .cocktail__recipe {
   display: flex;
   flex-direction: column;
+  gap: 25px;
 }
 
 .cocktail__recipe-name {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   position: relative;
-  margin-bottom: 25px;
 }
 
 .cocktail__recipe-title {
@@ -68,56 +66,45 @@ const props = defineProps<Cocktail>();
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
   text-align: center;
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 25px;
   line-height: 37px;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .cocktail__recipe-title--empty {
-  color: #f04902;
+  color: var(--warning-color);
 }
 
 .cocktail__ingredients {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: grid;
+  gap: 10px;
 }
 
 .cocktail__ingredient {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.cocktail__ingredient:nth-last-child(1) {
-  margin-bottom: 0px;
 }
 
 .cocktail__ingredient-value {
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #ab8c6d;
+  color: var(--accent-color);
   margin-right: 15px;
 }
 
 .cocktail__ingredient-name {
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #fff;
+  color: var(--white-color);
 }
 
 @media (max-width: 992px) {
   .cocktail__img {
     width: 400px;
-    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -131,6 +118,7 @@ const props = defineProps<Cocktail>();
 @media (max-width: 767px) {
   .cocktail {
     flex-direction: column;
+    gap: 60px;
   }
 
   .cocktail--day {
@@ -139,7 +127,6 @@ const props = defineProps<Cocktail>();
 
   .cocktail__img {
     width: 100%;
-    margin-bottom: 60px;
   }
 }
 </style>

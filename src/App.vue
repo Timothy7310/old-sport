@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Header from "./components/Header.vue";
-import CocktailList from "./components/CocktailList.vue";
-import CocktailOfDayList from "./components/CocktailOfDayList.vue";
+import Header from "@/components/Header.vue";
+import CocktailList from "@/components/CocktailList.vue";
+import CocktailOfDayList from "@/components/CocktailOfDayList.vue";
 </script>
 
 <template>
