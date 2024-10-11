@@ -29,6 +29,7 @@ import bananaRefashioned from "@/assets/cocktails/banana-refashioned.jpg";
 import dirtySour from "@/assets/cocktails/dirty-sour.jpg";
 import laskos from "@/assets/cocktails/laskos.jpg";
 import wineCordial from "@/assets/cocktails/wine-cordial.jpg";
+import fiveFingerMartini from "@/assets/cocktails/five-finger-martini.jpg";
 
 export const cocktails: Cocktail[] = [
   {
@@ -103,7 +104,7 @@ export const cocktails: Cocktail[] = [
     image: cigaleGimlet,
     name: "Cigale gimlet",
     isWideName: false,
-    isCocktailOfDay: false,
+    isCocktailOfDay: true,
     ingredients: [
       {
         name: "Yogurt vodka",
@@ -130,12 +131,12 @@ export const cocktails: Cocktail[] = [
         value: "40 ml.",
       },
       {
-        name: "60 ml.",
-        value: "Strawberry water",
+        name: "Strawberry water",
+        value: "60 ml.",
       },
       {
-        name: "10 ml.",
-        value: "Lemongrass syrup",
+        name: "Lemongrass syrup",
+        value: "10 ml.",
       },
     ],
   },
@@ -271,7 +272,7 @@ export const cocktails: Cocktail[] = [
     image: jungleBird,
     name: "Jungle Bird",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Pineapple Rum",
@@ -395,7 +396,7 @@ export const cocktails: Cocktail[] = [
     image: madBillsToPay,
     name: "Mad Bills to Pay",
     isWideName: true,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Gin",
@@ -423,7 +424,7 @@ export const cocktails: Cocktail[] = [
     image: lyon,
     name: "Lyon",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Cherry Tomato Shrub",
@@ -499,7 +500,7 @@ export const cocktails: Cocktail[] = [
     image: champsElysees,
     name: "Champs Élysées 2.0",
     isWideName: true,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Cognac",
@@ -730,12 +731,16 @@ export const cocktails: Cocktail[] = [
         value: "40 ml.",
       },
       {
-        name: "Dirty Apple",
+        name: "Dirty Apple liqueur",
         value: "10 ml.",
       },
       {
-        name: "Simple Syrop",
+        name: "Simple syrup",
         value: "10 ml.",
+      },
+      {
+        name: "Lemon juice",
+        value: "20 ml.",
       },
     ],
   },
@@ -743,7 +748,7 @@ export const cocktails: Cocktail[] = [
     image: laskos,
     name: "Laskos",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Gin with Olive",
@@ -767,7 +772,7 @@ export const cocktails: Cocktail[] = [
     image: wineCordial,
     name: "Wine Squze",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Wine Cordial",
@@ -784,6 +789,34 @@ export const cocktails: Cocktail[] = [
       {
         name: "Orange bitter",
         value: "1 Dash",
+      },
+    ],
+  },
+  {
+    image: fiveFingerMartini,
+    name: "Five finger Martini",
+    isWideName: true,
+    isCocktailOfDay: true,
+    ingredients: [
+      {
+        name: "Yogurt vodka",
+        value: "40 ml.",
+      },
+      {
+        name: "Vodka",
+        value: "20 ml.",
+      },
+      {
+        name: "Dolin Blanc",
+        value: "10 ml.",
+      },
+      {
+        name: "Mint cordial",
+        value: "2.5 ml.",
+      },
+      {
+        name: "Water",
+        value: "20 ml.",
       },
     ],
   },
