@@ -30,6 +30,8 @@ import dirtySour from "@/assets/cocktails/dirty-sour.jpg";
 import laskos from "@/assets/cocktails/laskos.jpg";
 import wineCordial from "@/assets/cocktails/wine-cordial.jpg";
 import fiveFingerMartini from "@/assets/cocktails/five-finger-martini.jpg";
+import raito from "@/assets/cocktails/raito.jpg";
+import Kukichafizz from "@/assets/cocktails/kukicha-fizz.jpg";
 
 export const cocktails: Cocktail[] = [
   {
@@ -817,6 +819,46 @@ export const cocktails: Cocktail[] = [
       {
         name: "Water",
         value: "20 ml.",
+      },
+    ],
+  },
+  {
+    image: raito,
+    name: "Raito",
+    isWideName: false,
+    isCocktailOfDay: true,
+    ingredients: [
+      {
+        name: "Sake",
+        value: "45 ml.",
+      },
+      {
+        name: "Kukicha cordial",
+        value: "30 ml.",
+      },
+      {
+        name: "Umeshu",
+        value: "10 ml.",
+      },
+    ],
+  },
+  {
+    image: Kukichafizz,
+    name: "Kukicha fizz",
+    isWideName: false,
+    isCocktailOfDay: true,
+    ingredients: [
+      {
+        name: "Gin",
+        value: "45 ml.",
+      },
+      {
+        name: "Kukicha soda",
+        value: "30 ml.",
+      },
+      {
+        name: "Simple syrup",
+        value: "10 ml.",
       },
     ],
   },
