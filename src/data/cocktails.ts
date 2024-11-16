@@ -32,13 +32,14 @@ import wineCordial from "@/assets/cocktails/wine-cordial.jpg";
 import fiveFingerMartini from "@/assets/cocktails/five-finger-martini.jpg";
 import raito from "@/assets/cocktails/raito.jpg";
 import Kukichafizz from "@/assets/cocktails/kukicha-fizz.jpg";
+import BonVivant from "@/assets/cocktails/bon-vivant.jpg";
 
 export const cocktails: Cocktail[] = [
   {
     image: C_C,
     name: "C&C",
     isWideName: false,
-    isCocktailOfDay: false,
+    isCocktailOfDay: true,
     ingredients: [
       {
         name: "Bourbon",
@@ -106,7 +107,7 @@ export const cocktails: Cocktail[] = [
     image: cigaleGimlet,
     name: "Cigale gimlet",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Yogurt vodka",
@@ -350,7 +351,7 @@ export const cocktails: Cocktail[] = [
     image: fitzgerald,
     name: "Fitzgerald",
     isWideName: false,
-    isCocktailOfDay: false,
+    isCocktailOfDay: true,
     ingredients: [
       {
         name: "Jerez Fino",
@@ -826,7 +827,7 @@ export const cocktails: Cocktail[] = [
     image: raito,
     name: "Raito",
     isWideName: false,
-    isCocktailOfDay: true,
+    isCocktailOfDay: false,
     ingredients: [
       {
         name: "Sake",
@@ -859,6 +860,30 @@ export const cocktails: Cocktail[] = [
       {
         name: "Simple syrup",
         value: "10 ml.",
+      },
+    ],
+  },
+  {
+    image: BonVivant,
+    name: "Bon-Vivant",
+    isWideName: false,
+    isCocktailOfDay: true,
+    ingredients: [
+      {
+        name: "Campari",
+        value: "30 ml.",
+      },
+      {
+        name: "Cherry Liqueur",
+        value: "30 ml.",
+      },
+      {
+        name: "Porto Ruby",
+        value: "60 ml.",
+      },
+      {
+        name: "Gin with walnut",
+        value: "60 ml.",
       },
     ],
   },

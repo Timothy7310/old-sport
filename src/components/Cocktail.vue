@@ -1,20 +1,17 @@
 <template>
   <article class="cocktail">
-    <img :src="props.image" alt="" class="cocktail__img" />
+    <img :src="image" alt="" class="cocktail__img" />
     <div class="cocktail__recipe">
       <div class="cocktail__recipe-name">
         <img
-          :src="props.isWideName ? nameIconWide : nameIcon"
+          :src="isWideName ? nameIconWide : nameIcon"
           alt=""
           class="cocktail__recipe-img"
         />
-        <h3 class="cocktail__recipe-title">{{ props.name }}</h3>
+        <h3 class="cocktail__recipe-title">{{ name }}</h3>
       </div>
       <ul class="cocktail__ingredients">
-        <li
-          v-for="ingredient in props.ingredients"
-          class="cocktail__ingredient"
-        >
+        <li v-for="ingredient in ingredients" class="cocktail__ingredient">
           <span class="cocktail__ingredient-value">{{ ingredient.value }}</span>
           <span class="cocktail__ingredient-name">{{ ingredient.name }}</span>
         </li>
@@ -24,12 +21,11 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue";
 import type { Cocktail } from "@/types/index.types";
 import nameIcon from "@/assets/icons/name.svg";
 import nameIconWide from "@/assets/icons/name-wide.svg";
 
-const props = defineProps<Cocktail>();
+defineProps<Cocktail>();
 </script>
 
 <style>
